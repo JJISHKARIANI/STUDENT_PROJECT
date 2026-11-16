@@ -33,7 +33,7 @@ def main():
 
                 name_arg = new_name if new_name else None
                 grade_arg = float(new_grade_str) if new_grade_str else None
-
+# aq float davuwere radgan strip da float ertad errors warmoqmnis
                 manager.update_student(roll_number, new_name=name_arg, new_grade=grade_arg)
 
             elif choice == '4':
@@ -55,7 +55,7 @@ def main():
             print("[searching error]")
         except Exception as e:
             print("[unexcpected error]")
-
+# agwerilia value da keyerrorebi da exception rom sxva erroebi daichiros
 if __name__ == "__main__":
     main()
 
