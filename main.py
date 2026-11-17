@@ -1,8 +1,8 @@
-from stud_managment import StudentManagemnt
+from stud_management import StudentManagement
 from students import Student
 
 def main():
-    manager = StudentManagemnt()
+    manager = StudentManagement()
     while True:
         print("Students (system)")
         print("1. add student ")

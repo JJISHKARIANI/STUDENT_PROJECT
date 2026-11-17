@@ -1,7 +1,7 @@
 from students import Student
 import json
 
-class StudentManagemnt:
+class StudentManagement:
     def __init__(self) -> None:
         self.__student: dict[int, Student] = {}
         self.load_from_file()
