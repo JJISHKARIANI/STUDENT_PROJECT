@@ -59,3 +59,4 @@ def main():
 if __name__ == "__main__":
     main()
 
+# aq vuebnebit ro gaushvas es file tu aris pirdapir gashveba da araa import sxva failidan
