@@ -5,7 +5,7 @@ class StudentManagement:
     def __init__(self) -> None:
         self.__student: dict[int, Student] = {}
         self.load_from_file()
-        # chartvistanave programis rom daiwyos failidan monacemebis wakitxbas
+        # chartvistanave programis rom daiwyos failidan monacemebis wakitxbas ('dzveli' monacemebis)
      
     def save_file(self):
         data = []
@@ -18,7 +18,7 @@ class StudentManagement:
 
         with open("students_list.json", "w", encoding="utf-8") as file:
             json.dump(data, file, ensure_ascii=False, indent=4) 
-# leqsikonis saxit sias vwert  json fileshi
+# leqsikonis gardaqmnili saxit sias vwert (serealizacias)  json fileshi
     def load_from_file(self):
         try:
             with open("students_list.json", "r", encoding="utf-8") as file:
@@ -28,9 +28,8 @@ class StudentManagement:
                     self.__student[s.roll_number] = s
         except FileNotFoundError:
             pass
-                #tu file ar aris  daerorebs   
-# vkitxulobt files da  titoueil arsebuli elementidan vqmnit isev obieqts da  memoryshi vabrunebt, pass tu pirvelad vrtav programas
-# da ar arsebobs file ar daaerorebs
+                #(try except)tu pirvelad irtveba da json file jer araris daaerorebs tumca pass amas acherebs 
+# vkitxulobt files da  titoueil arsebuli elementidan vqmnit isev obieqts da  memoryshi vabrunebt
     def add_student(self, name: str, roll_number: int, grade: float) -> None:
         if roll_number in self.__student:
             raise ValueError('student is in list')
