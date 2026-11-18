@@ -5,7 +5,7 @@ class StudentManagement:
     def __init__(self) -> None:
         self.__student: dict[int, Student] = {}
         self.load_from_file()
-        # chartvistanave programis rom daiwyos failidan monacemebis wakitxbas ('dzveli' monacemebis)
+        # chartvistanave programam rom daiwyos failidan monacemebis wakitxva ('dzveli' monacemebis)
      
     def save_file(self):
         data = []
